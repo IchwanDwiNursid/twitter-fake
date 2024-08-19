@@ -11,7 +11,6 @@ export default async function handler(
 
   try {
     const { postId } = req.query;
-    console.log(postId);
     if (!postId || typeof postId !== "string") {
       throw new Error("Invalid ID");
     }
