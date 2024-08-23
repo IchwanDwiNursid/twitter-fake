@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "prisma generate && ncc build ./src/index.js -o dist && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -29,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vercel/ncc": "^0.38.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",

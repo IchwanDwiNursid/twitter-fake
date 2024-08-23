@@ -4,6 +4,7 @@ import Input from "../Input";
 import Modal from "../Modal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
@@ -11,6 +12,9 @@ const LoginModal = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, isLoading] = useState(false);
+
+  // TODO : if user not login // login modal show after 3 s
+  const router = useRouter();
 
   const onToggle = useCallback(() => {
     if (loading) {

@@ -25,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({ label, showBackArrow }) => {
           />
         )}
         <h1 className="text-white text-xl font-semibold">{label}</h1>
+        <h2 className="text-neutral-800">@IchwanDev</h2>
       </div>
     </div>
   );
